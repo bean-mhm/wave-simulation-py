@@ -4,6 +4,10 @@
 
 This is a small experiment with wave simulations in up to 3 dimensions. The 3D version can be visualized with a volume rendering technique, or by making a 2D slice.
 
+## Performance
+
+You shouldn't expect too much performance out of a single-threaded Python script, but this is enough for getting started. I'm currently working on a C++ version with multithreading and a whole lot of optimizations. We could also utilize discrete GPUs to speed up the simulation even more, since it's fairly parallelizable (kinda sorta). I may or may not publish the C++ version in the future.
+
 ## Eye Candy
 
 ![Screenshot](images/screenshot-1.png)
@@ -24,10 +28,6 @@ You can think of u(x, y, z, t) as a function that takes in the position and time
 
  - [Wave equation - Wikipedia](https://en.wikipedia.org/wiki/Wave_equation)
  - [Partial derivative - Wikipedia](https://en.wikipedia.org/wiki/Partial_derivative)
-
-## Performance
-
-You shouldn't expect too much performance out of a single-threaded Python script, but this is enough for getting started. I'm currently working on a C++ version with multithreading and a whole lot of optimizations. We could also utilize discrete GPUs to speed up the simulation even more, since it's fairly parallelizable (kinda sorta). I may or may not publish the C++ version in the future.
 
 ## Disclaimer
 
