@@ -22,9 +22,8 @@ You can think of u(x, y, z, t) as a function that takes in the position and time
 
 ## Resources
 
-https://en.wikipedia.org/wiki/Wave_equation
-
-https://en.wikipedia.org/wiki/Partial_derivative
+ - [Wave equation - Wikipedia](https://en.wikipedia.org/wiki/Wave_equation)
+ - [Partial derivative - Wikipedia](https://en.wikipedia.org/wiki/Partial_derivative)
 
 ## Performance
 
