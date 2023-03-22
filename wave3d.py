@@ -25,7 +25,7 @@ visual = 'volume'
 slice_z_index = 10
 
 # How many times to increment before volume visualization
-volume_runs = 10
+volume_iters = 10
 
 
 
@@ -43,11 +43,8 @@ speed = 10
 # Initial values
 u = np.zeros(shape=(nx, ny, nz), dtype=float, order='C')
 
-# Uncomment to randomize the initial values
-#u = np.random.uniform(low=-0.1, high=0.1, size=nx*ny*nz)
-#u = np.reshape(a=u, newshape=(nx, ny, nz), order='C')
-
 # Boost a specific point's value
+# You can modify this to have different initial values.
 u[10, 10, 10] = 1.0
 
 # Previous values
@@ -108,7 +105,7 @@ def increment():
                 # Get the current value
                 curr = u[x][y][z]
                 
-                # Calculate the second gradient with respect to x, y, and z
+                # Calculate the second gradients with respect to x, y, and z
                 
                 grad_x = ((get_bound_md(u, (x + 1, y, z)) - curr) -
                         (curr - get_bound_md(u, (x - 1, y, z)))) / step2
@@ -158,7 +155,7 @@ def get_slice():
 # Visualize
 
 if visual == 'volume':
-    for i in range(volume_runs):
+    for i in range(volume_iters):
         increment()
     
     X, Y, Z = np.mgrid[:nx, :ny, :nz]
@@ -172,7 +169,7 @@ if visual == 'volume':
         isomin=-0.1,
         isomax=0.1,
         opacity=0.1, # needs to be small to see through all surfaces
-        surface_count=100, # needs to be a large number for good volume rendering
+        surface_count=50, # needs to be a large number for good volume rendering
         ))
     
     fig.show()

@@ -26,10 +26,10 @@ c = 10
 
 
 
-# Initial vertical positions of the points
+# Initial values / vertical positions of the points
 pos = [0.0] * n
 
-# Previous positions
+# Previous values / positions
 pos_last = pos.copy()
 
 
@@ -78,7 +78,7 @@ def increment():
 
     # Go through the points
     for i in range(n):
-        # Calculate the second gradient with respect to x
+        # Calculate the second derivative with respect to x
         grad = ((get_bound(pos, i + 1) - get_bound(pos, i)) -
                 (get_bound(pos, i) - get_bound(pos, i - 1))) / (dx**2)
         
@@ -105,12 +105,13 @@ def increment():
     total_time += dt
     
     # Oscillate a specific point
-    amp = 0.3
-    freq = 40
     osc_time = 3.0
     if (total_time < osc_time):
-        amp *= 1.0 - (total_time / osc_time)
-        freq *= 1.0 - (total_time / osc_time)
+        strength = 1.0 - (total_time / osc_time)
+        
+        amp = 0.3 * strength
+        freq = 40 * strength
+        
         pos[10] = math.sin(total_time * freq) * amp
 
 # Make an interactive plot
