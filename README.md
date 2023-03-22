@@ -4,6 +4,8 @@
 
 This is a small experiment with wave simulations in up to 3 dimensions. The 3D version can be visualized with a volume rendering technique, or by making a 2D slice.
 
+[Here's a Short video I've made about this on YouTube.](https://www.youtube.com/shorts/5mN1zTjf8vo)
+
 ## Performance
 
 You shouldn't expect too much performance out of a single-threaded Python script, but this is enough for getting started. I'm currently working on a C++ version with multithreading and a whole lot of optimizations. We could also utilize discrete GPUs to speed up the simulation even more, since it's fairly parallelizable (kinda sorta). I may or may not publish the C++ version in the future.
