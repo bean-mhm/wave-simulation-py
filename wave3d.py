@@ -19,7 +19,7 @@ import plotly.graph_objects as go
 # Visualization method
 # 'slice': Advance the simulation live and render a 2D slice
 # 'volume': Visualize the 3D volume as a whole in constant time
-visual = 'volume'
+visual = 'slice'
 
 # Z index for slices
 slice_z_index = 10
@@ -60,12 +60,12 @@ max_dt = step / (speed * np.sqrt(3.0))
 print(f'{max_dt = }')
 
 # Timestep
-dt = 1.0 * max_dt
+dt = 0.9 * max_dt
 
 # Stiffness
 # Must be greater than or equal to 1 to function properly.
 # The formula is made up and likely not physically correct.
-stiffness = 1.0
+stiffness = 3.0
 
 
 
