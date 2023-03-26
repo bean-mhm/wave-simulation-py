@@ -65,7 +65,7 @@ dt = 0.9 * max_dt
 # Stiffness
 # Must be greater than or equal to 1 to function properly.
 # The formula is made up and likely not physically correct.
-stiffness = 3.0
+stiffness = 2.0
 
 
 
@@ -103,7 +103,7 @@ def increment():
         for y in range(ny):
             for x in range(nx):
                 # Get the current value
-                curr = u[x][y][z]
+                curr = u[x, y, z]
                 
                 # Calculate the second gradients with respect to x, y, and z
                 
@@ -120,7 +120,7 @@ def increment():
                 acc = speed2 * (grad_x + grad_y + grad_z)
                 
                 # Get the current velocity
-                currVel = (curr - u_last[x][y][z]) / dt
+                currVel = (curr - u_last[x, y, z]) / dt
                 
                 # Adjust the velocity
                 currVel += acc * dt
@@ -129,14 +129,14 @@ def increment():
                 currVel *= stiffen_mul
                 
                 # Store the velocity
-                vel[x][y][z] = currVel
+                vel[x, y, z] = currVel
 
     # Go through the points and adjust the values based on the
     # velocities that we calculated before
     for z in range(nz):
         for y in range(ny):
             for x in range(nx):
-                u[x][y][z] += vel[x][y][z] * dt
+                u[x, y, z] += vel[x, y, z] * dt
 
     # Use the backup we made before
     u_last = temp
@@ -148,9 +148,11 @@ def get_slice():
     slice = np.zeros(shape=(nx, ny), dtype=float, order='C')
     for y in range(ny):
         for x in range(nx):
-            slice[x][y] = u[x][y][slice_z_index]
+            slice[x, y] = u[x, y, slice_z_index]
             
     return slice
+
+
 
 # Visualize
 
