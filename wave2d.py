@@ -46,7 +46,7 @@ max_dt = step / (speed * np.sqrt(2.0))
 print(f'{max_dt = }')
 
 # Timestep
-dt = 0.9 * max_dt
+dt = 0.8 * max_dt
 
 # Stiffness
 # Must be greater than or equal to 1 to function properly.
