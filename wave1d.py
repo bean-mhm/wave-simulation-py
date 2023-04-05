@@ -114,6 +114,8 @@ def increment():
         
         pos[10] = math.sin(total_time * freq) * amp
 
+
+
 # Make an interactive plot
 plt.ion()
 fig = plt.figure()
