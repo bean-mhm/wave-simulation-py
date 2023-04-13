@@ -6,6 +6,8 @@ This is a small experiment with wave simulations in up to 3 dimensions. The 3D v
 
 [Here's a Short video I've made about this on YouTube.](https://www.youtube.com/shorts/5mN1zTjf8vo)
 
+[Here's a video demo of what I achieved by experimenting with the code.](https://www.youtube.com/watch?v=JeGbCcvAqc8)
+
 ## Performance
 
 You shouldn't expect too much performance out of a single-threaded Python script, but this is enough for getting started. I'm currently working on a C++ version with multithreading and a whole lot of optimizations. We could also utilize discrete GPUs to speed up the simulation even more, since it's fairly parallelizable (kinda sorta).
