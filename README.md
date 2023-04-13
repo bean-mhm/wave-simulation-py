@@ -22,6 +22,8 @@ You shouldn't expect too much performance out of a single-threaded Python script
 
 ![Screenshot](images/screenshot-3.png)
 
+![Screenshot](images/screenshot-4.png)
+
 ## Equation
 
 The following is the general equation that we need to use.
