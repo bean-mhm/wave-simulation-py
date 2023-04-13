@@ -8,9 +8,11 @@ This is a small experiment with wave simulations in up to 3 dimensions. The 3D v
 
 ## Performance
 
-You shouldn't expect too much performance out of a single-threaded Python script, but this is enough for getting started. I'm currently working on a C++ version with multithreading and a whole lot of optimizations. We could also utilize discrete GPUs to speed up the simulation even more, since it's fairly parallelizable (kinda sorta). I may or may not publish the C++ version in the future.
+You shouldn't expect too much performance out of a single-threaded Python script, but this is enough for getting started. I'm currently working on a C++ version with multithreading and a whole lot of optimizations. We could also utilize discrete GPUs to speed up the simulation even more, since it's fairly parallelizable (kinda sorta).
 
 **Update:** I've added `wave2d_but_better.py` which is more optimized and makes it easier to do random experiments.
+
+**Update:** [Check out the WIP C++ version](https://github.com/bean-mhm/wave-tracing)
 
 ## Eye Candy
 
