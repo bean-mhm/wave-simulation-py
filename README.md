@@ -16,6 +16,18 @@ You shouldn't expect too much performance out of a single-threaded Python script
 
 **Update:** [Check out the WIP C++ version](https://github.com/bean-mhm/wave-tracing)
 
+## Shadertoy
+
+You can also check out these wave simulation shaders (in GLSL) on Shadertoy:
+
+- [3D Wave Simulation](https://www.shadertoy.com/view/mdBcz3)
+
+![image](https://github.com/bean-mhm/wave-simulation-py/assets/98428255/74693b04-74c5-40fa-b663-e48ba90bfda8)
+
+- [Interactive 2D Wave Simulation](https://www.shadertoy.com/view/mdScW1)
+
+![image](https://github.com/bean-mhm/wave-simulation-py/assets/98428255/93b85d7e-8c78-46bd-8b16-19ea09360444)
+
 ## Eye Candy
 
 ![Screenshot](images/screenshot-1.png)
